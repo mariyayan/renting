@@ -1,0 +1,351 @@
+
+<nav class='flex-container'>
+
+
+<div id='message-window' class='window'>Зарегестрируйтесь или войдите</div>
+
+    <div id='authentication-window' class='window'>
+        <span class="fas fa-times cross"></span>
+        <section id='authentication' class='form-window'>
+            <form id='authentication-form'>
+                <fieldset>
+                    <legend>Authentication</legend>
+                    <div class='input-container'>
+                        <div class='authentication-input-container'>
+                            <label for="authentication-login">Login</label>
+                            <input id="authentication-login" class='form-data' type="text" name='login'>
+                        </div>
+                        <div class='validation-field-container'>
+                            <p class='validation-field'>Логин должен быть не короче 3-ех букв и не длиннее 10 и содержать буквы и цифры</p>
+                            <p class='server-validation-field-login'>Пользователя с таким логином не существует</p>
+                        </div>
+                    </div>
+                    <div class='input-container'>
+                        <div class='authentication-input-container'>
+                            <label for="authentication-password">Password</label>
+                            <input id="authentication-password" class='form-data' type="password" name='password'>
+                        </div>
+                        <div class='validation-field-container'>
+                            <p class='validation-field'>Пароль должен быть не короче 5-ех символов и не длиннее 15</p>
+                            <p class='server-validation-field-password'>Неверный пароль</p>
+                        </div>
+                    </div>
+                    <div class='input-container'>
+                        <div class='authentication-input-container form-data'>
+                            <label for="authentication-type-tenant">tenant</label>
+                            <input id="authentication-type-tenant" type='radio' name='auth-type' value='tenant'>
+                            <label for="authentication-type-owner">owner</label>
+                            <input id="authentication-type-owner" type='radio' name='auth-type' value='owner'>
+                        </div>
+                        <div class='validation-field-container'>
+                            <p class='validation-field'>Один из вариантов должен быть выбран</p>
+                        </div>
+                    </div>
+                </fieldset>
+                <input type="submit" value="Отправить" id='send-authentication-form' class='grey-btn'>
+            </form>
+        </section>
+    </div>
+    <div id='registration-window' class='window'>
+        <span class="fas fa-times cross"></span>
+        <section id='registration' class='form-window'>
+            <form id='registration-form'>
+                <legend>Registration</legend>
+                <fieldset>
+                    <div class='input-container'>
+                        <label for="registration-name">Имя</label>
+                        <input id="registration-name" class='form-data' type="text" placeholder="Введите имя" title='Введите имя' name='name'>
+                        <div class='validation-field-container'>
+                            <p class='validation-field'>Данное поле может содержать только буквы</p>
+                        </div>
+                    </div>
+                    <div class='input-container'>
+                        <label for="registration-surname">Фамилия</label>
+                        <input id="registration-surname" class='form-data' type="text" placeholder="Введите фамилию" title='Введите фамилию' name='surname'>
+                        <div class='validation-field-container'>
+                            <p class='validation-field'>Данное поле может содержать только буквы</p>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <div class='input-container'>
+                        <label for="registration-email">Email</label>
+                        <input id="registration-email" type="email" class='form-data' placeholder='example@mail.ru' title='example@mail.ru' name='email'>
+                        <div class='validation-field-container'>
+                            <p class='validation-field'>Неправильный формат email</p>
+                        </div>
+                    </div>
+                    <div class='input-container'>
+                        <label for="registration-phone">Телефон</label>
+                        <input id="registration-phone" type="text" class='form-data' placeholder="+(000-00)-000-00-00" title='+(000-00)-000-00-00' name='phone'>
+                        <div class='validation-field-container'>
+                            <p class='validation-field'>Данное поле может содержать только цифры, "()" и "+"</p>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <div class='input-container'>
+                        <label for="registration-login">Логин</label>
+                        <input id="registration-login" type="text" class='form-data' name='login' placeholder='может содержать буквы и цифры и быть не короче 3 и не длинее 10' title='может содержать буквы и цифры и быть не короче 3 и не длинее 10'>
+                        <div class='validation-field-container'>
+                            <p class='validation-field'>Данное поле может содержать только буквы и цифры и быть не короче 3 символов и не длиннее 10</p>
+                            <p class='server-validation-field-login'>Пользователь с таким логином уже существует</p>
+                        </div>
+                    </div>
+                    <div class='input-container'>
+                        <label for="registration-password">Пароль</label>
+                        <input id="registration-password" type="password" class='form-data' name='password' placeholder='может содержать буквы и цифры и быть не короче 5 и не длинее 15' title='может содержать буквы и цифры и быть не короче 5 и не длинее 15'>
+                        <div class='validation-field-container'>
+                            <p class='validation-field'>Данное поле может содержать только буквы и цифры и быть не короче 5-ех символов и не длиннее 15</p>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <div class='input-container'>
+                        <label for="registration-passport-number">Номер паспорта</label>
+                        <input id="registration-passport-number" type="text" class='form-data' placeholder="ab1234567" title="ab1234567" name='passportNumber'>
+                        <div class='validation-field-container'>
+                            <p class='validation-field'>Данное поле может содержать только цифры и буквы</p>
+                        </div>
+                    </div>
+                    <div class='dates'>
+                        <div class='input-container'>
+                            <label for="registration-passport-date-of-issue">Дата выдачи паспорта</label>
+                            <input id="registration-passport-date-of-issue" class='form-data date1' type="date" name='passportDateOfIssue'>
+                            <div class='validation-field-container'>
+                                <p class='validation-field'>Данное поле не может быть пустым</p>
+                            </div>
+                        </div>
+                        <div class='input-container'>
+                            <label for="registration-passport-expiration-date">Дата истечения паспорта</label>
+                            <input id="registration-passport-expiration-date" class='form-data date2' type="date" name='passportExpirationDate'>
+                            <div class='validation-field-container'>
+                                <p class='validation-field'>Данное поле не может быть пустым</p>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+                <input type="submit" value="Отправить" id='send-registration-form' class='grey-btn'>
+            </form>
+        </section>
+    </div>
+    <div id='registerHousing-window' class='window'>
+        <span class="fas fa-times cross"></span>
+        <section id='registerHousing' class='form-window'>
+            <form id='register-housing-form'>
+                <legend>Зарегестрировать свой объект</legend>
+                <section>
+                    <h3 class='h3-heading-style'>Персональные данные</h3>
+                    <fieldset>
+                        <div class='input-container'>
+                            <label for="register-housing-owner-name">Имя</label>
+                            <input id="register-housing-owner-name" class='form-data' type="text" name='name' placeholder="Введите имя" title='Введите имя'>
+                            <div class='validation-field-container'>
+                                <p class='validation-field'>Данное поле может содержать только буквы</p>
+                            </div>
+                        </div>
+                        <div class='input-container'>
+                            <label for="register-housing-owner-surname">Фамилия</label>
+                            <input id="register-housing-owner-surname" class='form-data' type="text" placeholder="Введите фамилию" title='Введите фамилию' name='surname'>
+                            <div class='validation-field-container'>
+                                <p class='validation-field'>Данное поле может содержать только буквы</p>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <div class='input-container'>
+                            <label for="register-housing-owner-email">Email</label>
+                            <input id="register-housing-owner-email" type="email" class='form-data' placeholder='example@mail.ru' title='example@mail.ru' name='email'>
+                            <div class='validation-field-container'>
+                                <p class='validation-field'>Неправильный формат email</p>
+                            </div>
+                        </div>
+                        <div class='input-container'>
+                            <label for="register-housing-owner-phone">Телефон</label>
+                            <input id="register-housing-owner-phone" class='form-data' type="text" placeholder="+(000-00)-000-00-00" title='+(000-00)-000-00-00' name='phone'>
+                            <div class='validation-field-container'>
+                                <p class='validation-field'>Данное поле может содержать только цифры, "()" и "+"</p>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <div class='input-container'>
+                            <label for="register-housing-owner-login">Логин</label>
+                            <input id="register-housing-owner-login" class='form-data' type="text" name='login' placeholder='может содержать буквы и цифры и быть не короче 3 и не длинее 10' title='может содержать буквы и цифры и быть не короче 3 и не длинее 10'>
+                            <div class='validation-field-container'>
+                                <p class='validation-field'>Данное поле может содержать только буквы и цифры, быть не короче 3 символов и не длинее 15</p>
+                                <p class='server-validation-field-login'>Пользователь с таким логином уже существует</p>
+                            </div>
+                        </div>
+                        <div class='input-container'>
+                            <label for="register-housing-owner-password">Пароль</label>
+                            <input id="register-housing-owner-password" class='form-data' type="password" name='password' placeholder='может содержать буквы и цифры и быть не короче 5 и не длинее 15' title='может содержать буквы и цифры и быть не короче 5 и не длинее 15'>
+                            <div class='validation-field-container'>
+                                <p class='validation-field'>Данное поле может содержать только буквы и цифры и быть не короче 5-ех символов и не длиннее 15</p>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <div class='input-container'>
+                            <label for="register-housing-owner-passport-number">Номер паспорта</label>
+                            <input id="register-housing-owner-passport-number" class='form-data' type="text" placeholder="ab1234567" title="ab1234567" name='passportNumber'>
+                            <div class='validation-field-container'>
+                                <p class='validation-field'>Данное поле может содержать только цифры и буквы</p>
+                            </div>
+                        </div>
+                        <div class='dates'>
+                            <div class='input-container'>
+                                <label for="register-housing-owner-passport-date-of-issue">Дата выдачи паспорта</label>
+                                <input id="register-housing-owner-passport-date-of-issue" class='form-data date1' type="date" name='passportDateOfIssue'>
+                                <div class='validation-field-container'>
+                                    <p class='validation-field'>Данное поле не может быть пустым</p>
+                                </div>
+                            </div>
+                            <div class='input-container'>
+                                <label for="register-housing-owner-passport-expiration-date">Дата истечения паспорта</label>
+                                <input id="register-housing-owner-passport-expiration-date" class='form-data date2' type="date" name='passportExpirationDate'>
+                                <div class='validation-field-container'>
+                                    <p class='validation-field'>Данное поле не может быть пустым</p>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </section>
+                <section>
+                    <h3 class='h3-heading-style'>Информация о жилье</h3>
+                    <fieldset>
+                        <div class='input-container'>
+                            <label for="housing-name">Имя объекта</label>
+                            <input type='text' id='housing-name' class='form-data' placeholder="Введите имя объекта" title='Введите имя объекта' name='housingName'>
+                            <div class='validation-field-container'>
+                                <p class='validation-field'>Данное поле может содержать только буквы</p>
+                            </div>
+                        </div>
+                        <div class='input-container'>
+                            <label for="housing-city">Город</label>
+                            <input type='text' id='housing-city' class='form-data' placeholder="Введите город" title="Введите город">
+                            <div class='validation-field-container'>
+                                <p class='validation-field'>Данное поле может содержать только буквы</p>
+                            </div>
+                        </div>
+                        <div class='input-container'>
+                            <label for="housing-address">Адрес объекта</label>
+                            <input type='text' id='housing-address' class='form-data' placeholder="Введите адрес объекта" title='Введите адрес объекта' name='address'>
+                            <div class='validation-field-container'>
+                                <p class='validation-field'>Данное поле может содержать цифры и буквы '.' ','</p>
+                            </div>
+                        </div>
+                        <div class='input-container'>
+                            <label for="housing-description">Описание объекта</label>
+                            <textarea id='housing-description' class='form-data' placeholder="Введите описание" title='Введите описание' name='description'></textarea>
+                            <div class='validation-field-container'>
+                                <p class='validation-field'>Данное поле может содержать цифры и буквы '.' ','</p>
+                            </div>
+                        </div>
+                        <div class='input-container'>
+                            <label for="housing-price">Цена за сутки в евро</label>
+                            <input type='number' id='housing-price' class='form-data' placeholder="Введите цену" title='Введите цену' name='priceForDay'>
+                            <div class='validation-field-container'>
+                                <p class='validation-field'>Данное поле может содержать только цифры</p>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <div class='form-data input-container form-housing-data'>
+                        <fieldset>
+                            <legend>Комнаты</legend>
+                            <input id="housing-rooms-quantity-1" type="radio" name='roomsQuantity' value='1'>
+                            <label for="housing-rooms-quantity-1">1</label>
+                            <input id="housing-rooms-quantity-2" type="radio" name='roomsQuantity' value='2'>
+                            <label for="housing-rooms-quantity-2">2</label>
+                            <input id="housing-rooms-quantity-3" type="radio" name='roomsQuantity' value='3'>
+                            <label for="housing-rooms-quantity-3">3</label>
+                            <input id="housing-rooms-quantity-4" type="radio" name='roomsQuantity' value='4'>
+                            <label for="housing-rooms-quantity-4">4</label>
+                        </fieldset>
+                        <div class='validation-field-container'>
+                            <p class='validation-field'>Должно быть выбрано одно из значений данного поля</p>
+                        </div>
+                    </div>
+                    <div class='form-data input-container form-housing-data'>
+                        <fieldset>
+                            <label for="apartment">Апартаменты</label>
+                            <input type='radio' id='apartment' name='housingType' value="апартаменты">
+                            <label for="cottage">Коттедж</label>
+                            <input type='radio' id='cottage' name='housingType' value="коттеджи">
+                        </fieldset>
+                        <div class='validation-field-container'>
+                            <p class='validation-field'>Должно быть выбрано одно из значений данного поля</p>
+                        </div>
+                    </div>
+                    <div id='housing-convinients' class='form-housing-data'>
+                        <fieldset>
+                            <legend>Удобства</legend>
+                            <div>
+                                <label for="convinients-bathroom">Просторная ванная</label>
+                                <input type='checkbox' id='convinients-bathroom' name="convinients" value='Просторная ванная'>
+                            </div>
+                            <div>
+                                <label for="convinients-kitchen">Просторная кухня</label>
+                                <input type='checkbox' id='convinients-kitchen' name="convinients" value='Просторная кухня'>
+                            </div>
+                            <div>
+                                <label for="convinients-wifi">Wi-fi</label>
+                                <input type='checkbox' id='convinients-wi-fi' name="convinients" value='Wi-fi'>
+                            </div>
+                            <div>
+                                <label for="convinients-balcony">Балкон</label>
+                                <input type='checkbox' id='convinients-balcony' name="convinients" value='Балкон'>
+                            </div>
+                            <div>
+                                <label for="convinients-shop">Поблизости расположен магазин</label>
+                                <input type='checkbox' id='convinients-shop' name="convinients" value='Поблизости расположен магазин'>
+                            </div>
+                            <div>
+                                <label for="convinients-attraction">Поблизости расоложены достопримечательности</label>
+                                <input type='checkbox' id='convinients-attraction' name="convinients" value='Поблизости расоложены достопримечательности'>
+                            </div>
+                            <div>
+                                <label for="convinients-animals">Разрешено размещение с животными</label>
+                                <input type='checkbox' id='convinients-animals' name="convinients" value='Разрешено размещение с животными'>
+                            </div>
+                            <div>
+                                <label for="convinients-bed">Двуспальная кровать</label>
+                                <input type='checkbox' id='convinients-bed' name="convinients" value='Двуспальная кровать'>
+                            </div>
+                            <div>
+                                <label for="convinients-tv">Телевизор</label>
+                                <input type='checkbox' id='convinients-tv' name="convinients" value='Телевизор'>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div id='housing-images' class='input-container'>
+                        <fieldset>
+                            <label for="images">Загрузить фотографии</label>
+                            <input id='images' type="file" class='form-data' name='images' multiple accept=' image/*'>
+                            <div class='validation-field-container'>
+                                <p class='validation-field'>Хотя бы одно изображение должно быть выбрано</p>
+                            </div>
+                        </fieldset>
+                    </div>
+                </section>
+                <input type="submit" value="Отправить" id='send-register-housing-form' class='grey-btn'>
+            </form>
+        </section>
+    </div>
+    </section>
+    </section>
+    <div id='logo'><a href='/'>Renting</a></div>
+    <div id='user-nav-menu-btn' class='{{#if showUserNavMenu}}show-nav-menu{{/if}}'> <div><span class='fa fa-user-o'></span>
+        <ul id='user-nav-menu-window'>
+                <li><a href='/bookings'>Мои бронирования</a></li>
+                <li><a href='/dialoges'>Мои диалоги</a></li>
+                <li><a href='/logout'>Выйти</a></li>
+        </ul>
+    </div>
+    </div>
+    <div id='header-btns' class='flex-container {{#unless showUserNavMenu}}show-nav-menu{{/unless}}'>
+        <div><button class='beight-btn' id='registerHousing-btn'>Зарегистрировать жилье</button></div>
+        <div><button class='beight-btn' id='registration-btn'>Зарегистрироваться</button></div>
+        <div><button class='beight-btn' id='authentication-btn'>Войти в аккаунт</button></div>
+    </div>
+</nav>

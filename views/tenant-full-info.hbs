@@ -1,0 +1,37 @@
+<section class='full-info' id='tenant-full-info'>
+    <article id={{_id}}>
+        <div><img src="/img/user.png"></div>
+        <div>
+            <div>
+                <p class='name'>{{fullInfoData.name}}</p>
+                <p class='name'>{{fullInfoData.surname}}</p>
+            </div>
+            <div>
+                <div>
+                    <p>{{fullInfoData.email}}</p>
+                    <p>{{fullInfoData.phone}}</p>
+                </div>
+                <div>
+                    <p>Номер паспорта: {{fullInfoData.passportNumber}}</p>
+                    <p>Дата выдачи паспорта: {{fullInfoData.passportDateOfIssue}}</p>
+                    <p>Дата истечения паспорта: {{fullInfoData.passportExpirationDate}}</p>
+                    <div>
+                        <p><span>Дата приезда {{dates.arrivalDate}}</span></p>
+                        <p><span>Дата отъезда {{dates.departureDate}}</span></p>
+                    </div>
+                </div>
+            </div>
+            <div><button id='show-dialog-box-btn' class='grey-btn'>Написать сообщение</button></div>
+            <div id='show-dialog-box-window' class='window'>
+                <span class="fas fa-times cross"></span>
+                <div id='dialog-box' class='form-window'>
+                    <form class='form-housing-data'>
+                        <label for='message-textarea'>Написать сообщение</label>
+                        <textarea id='message-textarea'></textarea>
+                        <input type='submit' class='grey-btn' value='Отправить сообщение' id='/sendBookingMessage/{{_id}}'>
+                    </form>
+                </div>
+            </div>
+    </article>
+</section>
+<script type='module' type="text/javascript" src="/js/dialogeBox.js"></script>

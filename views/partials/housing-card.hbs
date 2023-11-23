@@ -1,0 +1,11 @@
+<article id='{{path}}/{{data._id}}' class='card flex-container'>
+    <div><img src={{#each data.images}}{{#unless @index}}{{this}}{{/unless}}{{/each}}></div>
+    <div>
+        <p><span class='name'>{{data.housingName}}</span>, <span class='city'>{{data.city}}</span></p>
+        <p class='address'>{{data.address}}</p>
+        <p>{{data.description}}</p>
+    </div>
+    <div>
+       <a href='{{path}}/{{data._id}}'><button class='beight-btn'>Просмотреть</button></a>
+    </div>
+</article>

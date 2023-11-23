@@ -1,0 +1,166 @@
+
+<div id='index-page' class='content-container'>
+<header>
+            <div>
+                <h1>Найти жилье</h1>
+                <form id='header-form' method='GET' action='/searchHousing'>
+                    <fieldset class='flex-container'>
+                         <div class='input-container'>
+                            <fieldset>
+                                <select class='form-data' name='city'>
+                                    <option id='option-choose-city' value="" disabled selected>Выберите город</option>
+                                    <option value='Минск'>Минск</option>
+                                    <option value='Варшава'>Варшава</option>
+                                    <option value='Вильнюс'>Вильнюс</option>
+                                    <option value='Рига'>Рига</option>
+                                    <option value='Париж'>Париж</option>
+                                    <option value='Вена'>Вена</option>
+                                </select>
+                            </fieldset>
+                            <div class='validation-field-container'>
+                                <p class='validation-field'>Выберите город</p>
+                            </div>
+                        </div>
+
+                        <div class='input-container'>
+                            <fieldset class='form-data'>
+                                <legend>Комнаты</legend>
+                                <input id="rooms-quantity-1" type="radio" name='roomsQuantity' value='1'>
+                                <label for="rooms-quantity-1">1</label>
+                                <input id="rooms-quantity-2" type="radio" name='roomsQuantity' value='2'>
+                                <label for="rooms-quantity-2">2</label>
+                                <input id="rooms-quantity-3" type="radio" name='roomsQuantity' value='3'>
+                                <label for="rooms-quantity-3">3</label>
+                                <input id="rooms-quantity-4" type="radio" name='roomsQuantity' value='4'>
+                                <label for="rooms-quantity-4">4</label>
+                            </fieldset>
+                            <div class='validation-field-container'>
+                                <p class='validation-field'>Выберите количество комнат</p>
+                            </div>
+                        </div>
+                        <div class='input-container'>
+                            <fieldset class='form-data'>
+                                <legend>Цена за сутки</legend>
+                                <input id="price-for-day-40" type="radio" name='priceForDay' value='40'>
+                                <label for="price-for-day-40">до 40$</label>
+                                <input id="price-for-day-70" type="radio" name='priceForDay' value='70'>
+                                <label for="price-for-day-70">до 70$</label>
+                                <input id="price-for-day-100" type="radio" name='priceForDay' value='100'>
+                                <label for="price-for-day-100">до 100$</label>
+                            </fieldset>
+                            <div class='validation-field-container'>
+                                <p class='validation-field'>Выберите цену</p>
+                            </div>
+                        </div>
+                        <div class='input-container'>
+                            <fieldset class='form-data'>
+                                <legend>Тип жилья</legend>
+                                <input id="cottages" type="radio" name='housingType' value="коттеджи">
+                                <label for="cottages">Коттеджи</label>
+                                <input id="apartments" type="radio" name='housingType' value='апартаменты'>
+                                <label for="apartments">Апартаменты</label>
+                            </fieldset>
+                            <div class='validation-field-container'>
+                                <p class='validation-field'>Выберите тип жилья</p>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <input type='submit' value='Найти' id='header-form-submit-btn' class='grey-btn'>
+                </form>
+            </div>
+</header>
+
+    <div id='slider'>
+        <div class='viewport'>
+            <span class="fas fa-angle-left arrows left-btn"></span>
+            <span class="fas fa-angle-right arrows right-btn"></span>
+            <div class='slides-wrapper'>
+                <div class='slide'><img src='/img/01.webp'>
+                    <div class='slider-text-content'>1 Lorem ipsum</div>
+                </div>
+                <div class='slide'><img src='/img/02.webp'>
+                    <div class='slider-text-content'>2 Lorem ipsum</div>
+                </div>
+                <div class='slide'><img src='/img/03.webp'>
+                    <div class='slider-text-content'>3 Lorem ipsum</div>
+                </div>
+                <div class='slide'><img src='/img/04.webp'>
+                    <div class='slider-text-content'>4 Lorem ipsum</div>
+                </div>
+                <div class='slide'><img src='/img/05.webp'>
+                    <div class='slider-text-content'>5 Lorem ipsum</div>
+                </div>
+            </div>
+            <div class='nav-btns'>
+                <div class='nav-btn active-nav-btn'></div>
+                <div class='nav-btn'></div>
+                <div class='nav-btn'></div>
+                <div class='nav-btn'></div>
+                <div class='nav-btn'></div>
+            </div>
+        </div>
+    </div>
+    <section id='categories'>
+        <h2 class='h2-heading-style'> Категории</h2>
+        <div id='categories-items' class='flex-container'>
+            <a href='/apartments'>
+                <figure>
+                    <h6>Апартаменты</h6>
+                    <div><img src='img/01.webp'></div>
+                    <figcaption>
+                        {{apartmentsQuantity}} апартаментов
+                    </figcaption>
+                </figure>
+            </a>
+            <a href='/cottages'>
+                <figure>
+                    <h6>Коттеджи</h6>
+                    <div><img src='img/02.webp'></div>
+                    <figcaption>
+                        {{cottagesQuantity}} коттеджей
+                    </figcaption>
+                </figure>
+            </a>
+        </div>
+    </section>
+    <section id='testimonials'>
+        <h2 class='h2-heading-style'>Отзывы</h2>
+
+
+
+        <div class='viewport'>
+           
+            <span class="fas fa-angle-left arrows left-btn"></span>
+            <span class="fas fa-angle-right arrows right-btn"></span>
+
+            <div class='slides-wrapper'>
+                <article class='slide'>
+                    <p>1 Lorem ipsum Lorem ipsum Lorem ipsum</p>
+                    <p>Lorem</p>
+                </article>
+                <article class='slide'>
+                    <p>2 Lorem ipsum Lorem ipsum Lorem ipsum</p>
+                    <p>Lorem</p>
+                </article>
+                <article class='slide'>
+                    <p>3 Lorem ipsum Lorem ipsum Lorem ipsum</p>
+                    <p>Lorem</p>
+                </article>
+                <article class='slide'>
+                    <p>4 Lorem ipsum Lorem ipsum Lorem ipsum</p>
+                    <p>Lorem</p>
+                </article>
+            </div>
+            
+<div class='nav-btns'>
+                <div class='nav-btn active-nav-btn'></div>
+                <div class='nav-btn'></div>
+                <div class='nav-btn'></div>
+                <div class='nav-btn'></div>
+            </div>
+
+        </div>
+    </section>
+
+</div>
+<script type='module' src="/js/main.js"></script>

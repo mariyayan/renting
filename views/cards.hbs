@@ -1,0 +1,33 @@
+<section id='cards'>
+
+    {{#if cardData.data}}
+    	{{#if housingCards}}
+    		{{#each cardData.data}}
+    			{{>housing-card data=this path=../cardData.path}}
+    		{{/each}}
+    	{{/if}}
+
+    	{{#if bookingCards}}
+    		{{#each cardData.data}}
+    			{{>booking-housing-card data=this.housing bookingId=this._id}}
+    		{{/each}}
+    	{{/if}}
+
+    	{{#if tenantCards}}
+    		{{#each cardData.data}}
+    			{{>booking-tenant-card data=this.tenant bookingId=this._id}}
+    		{{/each}}
+    	{{/if}}
+
+    	{{#if dialogeCards}}
+    		{{#each cardData.data}}
+    			{{>dialoge-card messageData=this}}
+    		{{/each}}
+    	{{/if}}
+
+    {{else}}
+    	<p>По данному запросу ничего не найдено</p>
+    {{/if}}
+
+</section>
+

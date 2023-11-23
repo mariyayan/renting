@@ -1,0 +1,114 @@
+
+<section class='full-info'>
+    <article id={{_id}}>
+        <div id='gallery-btn' class='flex-container'>
+            {{#each fullInfoData.images}}
+              <div class='housing-img'><img src={{this}}></div>
+            {{/each}}
+        </div>
+        <div id='housing-full-info-text-info-container' class='flex-container'>
+            <div class='housing-item-info'>
+                <h4 class='name'>{{fullInfoData.housingName}}</h4>
+                <p class='city'>{{fullInfoData.city}}</p>
+                <p class='address'>{{fullInfoData.address}}</p>
+                <p>{{fullInfoData.description}}</p>
+            </div>
+            <div>
+                <div class='housing-item-info'>
+                    <p class='housing-type'>{{fullInfoData.housingType}}</p>
+                    <p class='rooms-quantity'>{{fullInfoData.roomsQuantity}}</p>
+                </div>
+                <div class='housing-item-info'>
+                    <p class='price'>{{fullInfoData.priceForDay}}</p>
+                    {{#if dates}}
+                      <div class='dates'>
+                        <div class='input-container'>
+                            <fieldset>
+                                <input type='date' min={{dates.arrivalDate}} max={{dates.arrivalDate}} class='form-data' name='arrivalDate' value={{dates.arrivalDate}}>
+                            </fieldset>
+                        </div>
+                        <div class='input-container'>
+                            <fieldset>
+                                <input type='date' min={{dates.departureDate}} max={{dates.departureDate}} class='form-data' name='departureDate' value={{dates.departureDate}}>
+                            </fieldset>
+                        </div>
+                    </div>
+                    {{/if}}
+                </div>
+            </div>
+        </div>
+        <div class='convinients flex-container'>
+            {{#each fullInfoData.convinients}}
+              <span>{{this}}</span>
+            {{/each}}
+        </div>
+        <div><button id='show-dialog-box-btn' class='grey-btn'>Написать сообщение</button></div>
+        {{#if showBookBtn}}
+          <div id='/bookHousing/{{_id}}?arrivalDate={{dates.arrivalDate}}&departureDate={{dates.departureDate}}'><input type='submit' value='Забронировать' id='book-housing-btn' class='grey-btn'></div>
+        {{/if}}
+        <div id='show-dialog-box-window' class='window'>
+            <span class="fas fa-times cross"></span>
+            <div id='dialog-box' class='form-window'>
+                <form class='form-housing-data'>
+                    <label for='message-textarea'>Написать сообщение</label>
+                    <textarea id='message-textarea'></textarea>
+                    <input type='submit' value='Отправить сообщение' class='grey-btn' id={{sendMessageBoxId}}/{{_id}}>
+                </form>
+            </div>
+        </div>
+        {{#if showSearchForm}}
+         <form id='search-form'>
+            <p>Проверьте, свободнен ли данный вариант на Ваши даты</p>
+            <div class='dates'>
+                <div class='input-container'>
+                    <fieldset>
+                        <input type='date' min={{dates.arrivalDate}} max="2023-12-31" class='form-data date1' name='arrivalDate'>
+                    </fieldset>
+                    <div class='validation-field-container'>
+                        <p class='validation-field'>Выберите дату приезда</p>
+                    </div>
+                </div>
+                <div class='input-container'>
+                    <fieldset>
+                        <input type='date' min={{dates.arrivalDate}} max="2023-12-31" class='form-data date2' name='departureDate'>
+                    </fieldset>
+                    <div class='validation-field-container'>
+                        <p class='validation-field'>Выберите дату отъезда</p>
+                    </div>
+                </div>
+            </div>
+            <div id='/checkIsHousingBooked/{{_id}}'><input type='submit' class='grey-btn' id='check-is-housing-booked-submit-btn' value='Проверить'></div>
+        </form>
+        <div id='/bookHousing/{{_id}}' class='book-btn hide'><input type='submit' id='book-housing-btn' value='Забронировать' class='grey-btn'></div>
+        <div id='housing-is-booked-block' class='hide'>На данные даты свободных мест нет</div>
+        {{/if}}
+    </article>
+</section>
+<div id='gallery-window' class='window'>
+    <span class="fas fa-times cross"></span>
+    <div id='gallery-upper-slider'>
+        <span class="fas fa-angle-left arrows left-btn"></span>
+        <span class="fas fa-angle-right arrows right-btn"></span>
+        <div class='viewport'>
+            <div class='slides-wrapper'>
+                {{#each fullInfoData.images}}
+                  <div class='slide'><img src={{this}}></div>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+    <div id='gallery-lower-slider'>
+        <span class="fas fa-angle-left gallery-arrows left-btn"></span>
+        <span class="fas fa-angle-right gallery-arrows right-btn"></span>
+        <div class='viewport'>
+            <div id='gallery-nav-btns' class='slides-wrapper'>
+                {{#each fullInfoData.images}}
+                  <div class='slide nav-btn'><img src={{this}}></div>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+</div>
+<script type='module' type="text/javascript" src="/js/full-info.js"></script>
+<script type='module' type="text/javascript" src="/js/dialogeBox.js"></script>
+<script type='module' type="text/javascript" src="/js/gallery.js"></script>

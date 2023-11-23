@@ -1,0 +1,27 @@
+<section id='/sendDialogeMessage/{{dialogeId}}' class='dialoge'>
+    <div id='messages-container'>
+
+              {{#if showGetFiveLastMessagesBtn}}
+        <div id='get-five-last-messages-btn'>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+          {{/if}}
+
+        {{#each messageData}}
+
+        <article id={{this._id}} class='message'>
+            <div class='message-sender'>{{this.sender}}</div>
+            <div class='message-text'>{{this.message}}</div>
+            <time>{{this.time}}</time>
+        </article>
+        {{/each}}
+    </div>
+    <form id='messages-form' class='form-housing-data'>
+        <textarea id='message-content'></textarea>
+        <input type="submit" value='Отправить сообщение' class='grey-btn' id='send-message-btn'>
+    </form>
+</section>
+<script type='module' type="text/javascript" src="/js/dialoge.js"></script>
+
