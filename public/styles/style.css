@@ -1,0 +1,361 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#header-btns,
+#user-nav-menu-btn {
+    display: none;
+}
+
+#index-page>*,
+.full-info>*,
+#cards>*,
+.dialoge>*,
+nav {
+    margin-bottom: 150px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+ul {
+    list-style-type: none;
+}
+
+span {
+    font-family: fontawesome !important;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.hide-opacity {
+    opacity: 0 !important;
+    transition: all linear 1000ms;
+}
+
+.hide {
+    display: none !important;
+}
+
+.show-nav-menu{
+    display: flex!important;
+}
+
+.show-window {
+    display: block !important;
+    transition: all linear 300ms;
+    opacity: 1 !important;
+}
+
+@keyframes show-window-animation {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.positioned-element {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.form-window {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    overflow-y: scroll;
+}
+
+.show-message {
+    display: block !important;
+    animation: show-window-animation 8s 1 linear;
+}
+
+.wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(44, 44, 44, 0.3);
+    display: none;
+    opacity: 0;
+}
+
+.window {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(44, 44, 44, 0.3);
+    display: none;
+    overflow-y: scroll;
+    opacity: 0;
+    z-index: 1000;
+}
+
+.cross {
+    position: absolute;
+    top: 15px;
+    right: 30px;
+    font-size: 30px;
+    color: white;
+}
+
+.cross:hover {
+    cursor: pointer;
+}
+
+
+#server-message-window {
+    z-index: 1100 !important;
+}
+
+#server-message-window>div {
+    position: fixed;
+    width: 30%;
+    height: 200px;
+    background-color: white;
+    border: solid rgb(198, 198, 198) 1px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+/* BTNS */
+
+.grey-btn {
+    border: solid transparent 1px;
+    background-color: rgb(198, 198, 198);
+    color: white;
+    border-radius: 5px;
+    transition: all linear 300ms;
+    padding: 10px 15px;
+    display: block;
+    margin: 40px auto 0 auto;
+}
+
+.grey-btn:hover {
+    background-color: white;
+    color: rgb(198, 198, 198);
+    border: solid rgb(34, 34, 34) 1px;
+    cursor: pointer;
+}
+
+.beight-btn {
+    background-color: rgb(209, 168, 146);
+    color: white;
+    border-radius: 3px;
+    padding: 10px;
+    transition: all linear 300ms;
+    border: solid transparent 1px;
+}
+
+.beight-btn:hover {
+    background-color: white;
+    color: rgb(209, 168, 146);
+    border: solid rgb(198, 198, 198) 1px;
+    cursor: pointer;
+    transform: scale(1.1, 1.1);
+}
+
+/* SLIDER, TESTIMONIALS, GALLERY */
+
+.viewport {
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.slides-wrapper {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: max-content;
+}
+
+.slide {
+    transition: all linear 500ms;
+    height: 100%;
+    position: relative;
+}
+
+.arrows {
+    position: absolute;
+    top: calc(45% - 20px);
+    background-color: rgba(198, 198, 198, 0.6);
+    border-radius: 20px;
+    color: white;
+    transition: all linear 300ms;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+}
+
+.arrows:hover {
+    cursor: pointer;
+    background-color: white;
+    color: rgb(53, 53, 53);
+}
+
+.nav-btns {
+    position: absolute;
+    top: 90%;
+    text-align: center;
+    width: 100%;
+    z-index: 5;
+}
+
+.nav-btns:hover {
+    cursor: pointer;
+}
+
+.nav-btns>div {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 7px;
+    background-color: rgb(34, 34, 34);
+    margin-right: 10px;
+}
+
+/* FORMS */
+
+.h2-heading-style {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.h3-heading-style {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.dates {
+    width: 100%;
+}
+
+.date {
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.name {
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.city {
+    font-size: 18px;
+    color: rgb(34, 34, 34);
+}
+
+.address {
+    font-size: 17px;
+    color: rgb(51, 50, 50);
+}
+
+
+.validation-field-container {
+    position: relative;
+    height: 60px;
+
+}
+
+.validation-field-container>p {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 5px;
+    height: 60px;
+    width: 100%;
+}
+
+.show-validation-field {
+    visibility: visible !important;
+}
+
+.server-validation-field-login,
+.server-validation-field-password,
+.validation-field {
+    visibility: hidden;
+}
+
+
+/* DIALOG */
+
+.message-text {
+    margin: 25px 0 10px 0;
+}
+
+.message-sender {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+time {
+    font-size: 12px;
+    color: grey;
+}
+
+
+@media screen and (max-width: 1200px) {
+
+    #index-page>*,
+    .full-info>*,
+    #cards>*,
+    .dialoge>*,
+    nav {
+        margin-bottom: 100px;
+    }
+
+    .cross {
+        top: 5px;
+        right: 10px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .flex-container {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .message-text {
+        margin: 15px 0 7px 0;
+    }
+
+
+}

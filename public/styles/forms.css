@@ -1,0 +1,225 @@
+
+.form-window>form {
+    background-color: white;
+    width: 100%;
+    padding: 30px;
+    border: solid rgb(198, 198, 198) 1px;
+}
+
+.form-window input {
+    width: 100%;
+}
+
+.form-window input[type="radio"],
+.form-window input[type="checkbox"],
+.form-window input[type="submit"] {
+    width: auto;
+}
+
+.form-window legend:nth-of-type(1) {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.form-window fieldset {
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.form-window label {
+    display: inline-block;
+    margin-right: 7px;
+    margin-bottom: 3px;
+}
+
+.form-window .input-container input,
+.form-window .input-container textarea {
+    padding: 5px;
+}
+
+/* AUTHENTICATION */
+
+
+#authentication {
+    height: 500px;
+    width: 620px;
+}
+
+
+#authentication-form>fieldset {
+    margin-bottom: 30px;
+}
+
+#authentication-form .authentication-input-container label {
+    margin-bottom: 10px;
+}
+
+.authentication-input-container {
+    width: 45%;
+    margin: 0 auto;
+}
+
+.authentication-input-container:nth-of-type(3)>input:nth-of-type(1) {
+    margin-right: 40px;
+}
+
+#authentication-form .validation-field-container {
+    text-align: center;
+}
+
+
+/* REGISTRATION / REGISTERHOUSING */
+
+#registration,
+#registerHousing {
+    width: 80%;
+    margin: 60px auto;
+}
+
+#registerHousing section:nth-of-type(2)>div:nth-of-type(1)>fieldset,
+#registerHousing section:nth-of-type(2)>div:nth-of-type(2)>fieldset {
+    margin-bottom: 0;
+}
+
+#register-housing-form textarea {
+    width: 80%;
+}
+
+#register-housing-form input[name="convinients"] {
+    margin-right: 15px;
+}
+
+#housing-convinients>fieldset {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#housing-convinients>fieldset>div {
+    margin: 0 5px 5px 0;
+}
+
+
+
+@media screen and (max-width: 1200px) {
+
+    /* MEDIUM AUTHENTICATION */
+
+    #authentication,
+    .authentication-input-container {
+        width: 80%;
+    }
+
+    #authentication .input-container:nth-of-type(3)>div:nth-of-type(1) {
+        text-align: center;
+    }
+
+    #authentication .form-window input[type="radio"]:nth-of-type(1) {
+        margin-right: 20px;
+    }
+
+    /* MEDIUM REGISTRATION */
+
+    #registration {
+        width: 90%;
+    }
+
+    /* MEDIUM REGISTERHOUSING */
+
+    #registerHousing {
+        width: 90%;
+    }
+
+    #housing-convinients>fieldset>div {
+        width: 47%;
+        margin-bottom: 12px;
+        margin-right: 0;
+    }
+
+    #register-housing-form input[name="convinients"] {
+        margin-right: 0;
+    }
+
+    #housing-convinients label,
+    #housing-convinients input {
+        margin-right: 0;
+        display: inline;
+    }
+
+    #register-housing-form textarea {
+        width: 70%;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+
+    .input-container {
+        width: 90%;
+    }
+
+    .form-window fieldset {
+        padding: 15px;
+    }
+
+    .form-window .input-container {
+        text-align: center;
+    }
+
+    .form-window label {
+        display: block;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    /* MINI AUTHENTICATION */
+
+    #authentication {
+        width: 90%;
+    }
+
+    #authentication .input-container {
+        text-align: left;
+    }
+
+
+    #authentication label {
+        display: inline-block;
+    }
+
+
+    /* MINI REGISTER HOUSING */
+
+    #registerHousing legend {
+        text-align: center;
+    }
+
+    #registerHousing section:nth-of-type(2)>div:nth-of-type(1)>fieldset>label,
+    #registerHousing section:nth-of-type(2)>div:nth-of-type(2)>fieldset>label {
+        display: inline;
+    }
+
+    #registerHousing section:nth-of-type(2)>div:nth-of-type(1)>fieldset>label {
+        margin-right: 10px;
+        margin-bottom: 0;
+    }
+
+    #registerHousing section:nth-of-type(2)>div:nth-of-type(2)>fieldset>input {
+        margin-right: 10px;
+    }
+
+    #registerHousing textarea {
+        width: 100%;
+    }
+
+    #housing-convinients>fieldset>div {
+        width: 100%;
+        text-align: center;
+    }
+
+    #housing-convinients label {
+        display: inline;
+        margin-bottom: 20px;
+    }
+}

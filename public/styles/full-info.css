@@ -1,0 +1,346 @@
+/* FULL INFO */
+
+.full-info {
+    width: 90%;
+    margin: 0 auto;
+}
+
+#gallery-btn {
+    flex-wrap: wrap;
+}
+
+#gallery-btn>div {
+    width: 25%;
+    height: 230px;
+    margin: 15px;
+}
+
+.full-info>article>.flex-container,
+#search-form {
+    padding: 40px 0;
+    margin-top: 30px;
+}
+
+#housing-full-info-text-info-container>div:nth-of-type(1) {
+    width: 60%;
+}
+
+#housing-full-info-text-info-container>div:nth-of-type(2) {
+    width: 30%;
+}
+
+.convinients {
+    flex-wrap: wrap;
+}
+
+.convinients>span {
+    width: 15%;
+    font-size: 18px;
+    color: rgb(209, 168, 146);
+    background-color: rgb(235, 217, 207);
+    padding: 6px 8px;
+    border-radius: 3px;
+    margin: 0 15px 15px 0;
+}
+
+.housing-item-info {
+    margin-bottom: 30px;
+}
+
+.housing-item-info>h4 {
+    margin-bottom: 15px;
+}
+
+.full-info .address {
+    margin: 10px 0 15px 0;
+}
+
+.housing-type {
+    color: rgb(51, 50, 50);
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.rooms-quantity {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.full-info .price {
+    margin-bottom: 10px;
+    font-size: 17px;
+    color: rgb(51, 50, 50);
+}
+
+.full-info #housing-full-info-text-info-container .dates {
+    width: 40%;
+}
+
+.full-info .dates .input-container:nth-of-type(1) {
+    margin-bottom: 15px;
+}
+
+.full-info .dates input {
+    width: 100%;
+}
+
+#tenant-full-info>article>div:nth-of-type(1) {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 30px;
+    border:solid black 1px;
+}
+
+#tenant-full-info>article>div:nth-of-type(2)>div {
+    margin-bottom: 30px;
+}
+
+#tenant-full-info p {
+    margin-bottom: 10px;
+}
+
+/* GALLERY */
+
+.show-gallery {
+    visibility: visible !important;
+}
+
+#gallery-window>div:nth-of-type(1) {
+    margin: 50px 0 30px 0;
+}
+
+#gallery-upper-slider .viewport {
+    width: 600px;
+    height: 350px;
+    overflow: hidden;
+}
+
+#gallery-upper-slider .slide {
+    width: 600px;
+}
+
+#gallery-upper-slider .left-btn,
+#gallery-upper-slider .right-btn {
+    z-index: 10;
+    top: calc(20px + (350px / 2));
+    background-color: rgba(250, 250, 250, 0.6);
+}
+
+#gallery-upper-slider .left-btn {
+    left: 25px;
+}
+
+#gallery-upper-slider .right-btn {
+    right: 25px;
+}
+
+#gallery-lower-slider {
+    width: 800px;
+    height: 150px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+#gallery-lower-slider .viewport {
+    width: 700px;
+    height: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+
+#gallery-lower-slider .slide {
+    width: 200px;
+    margin-right: 20px;
+}
+
+#gallery-lower-slider .slide:hover {
+    cursor: pointer;
+}
+
+.gallery-arrows {
+    font-size: 32px;
+    color: white;
+    position: absolute;
+    top: calc(150px / 2 - 20px);
+    transition: all linear 300ms;
+}
+
+#gallery-lower-slider .left-btn {
+    left: 10px;
+}
+
+#gallery-lower-slider .right-btn {
+    right: 10px;
+}
+
+.gallery-arrows:hover {
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* SEARCH FORM */
+
+#search-form>p {
+    font-size: 19px;
+    margin-bottom: 25px;
+}
+
+#search-form fieldset {
+    border: none;
+}
+
+#search-form .input-container {
+    width: 20%;
+}
+
+/* DIALOG BOX */
+
+#dialog-box {
+    text-align: center;
+    width: 50%;
+    height: 350px;
+    background-color: white;
+    border: solid rgb(198, 198, 198) 1px;
+    padding: 25px;
+}
+
+#dialog-box label {
+    display: block;
+    font-size: 20px;
+}
+
+#dialog-box textarea {
+    width: 100%;
+    margin: 30px 0 0 0;
+    height: 100px;
+}
+
+@media screen and (max-width: 1200px) {
+
+    /* MEDIUM GALLERY */
+
+    #gallery-upper-slider .viewport {
+        width: 500px;
+    }
+
+    #gallery-upper-slider .slide {
+        width: 500px;
+    }
+
+    #gallery-lower-slider {
+        width: 600px;
+    }
+
+    #gallery-lower-slider .viewport {
+        width: 500px;
+    }
+
+    #gallery-btn>div {
+        width: 40%;
+    }
+
+    #housing-full-info-text-info-container>div:nth-of-type(1),
+    #housing-full-info-text-info-container>div:nth-of-type(2) {
+        width: 45%;
+        text-align: center;
+        margin: 0 auto 70px auto;
+    }
+
+    .full-info #housing-full-info-text-info-container .dates {
+        margin: 0 auto;
+    }
+
+    .convinients>span {
+        width: auto;
+    }
+
+    #dialog-box {
+        width: 90%;
+    }
+
+    /* MEDIUM SEARCH FORM */
+
+    #search-form {
+        text-align: center;
+    }
+
+    #search-form .input-container {
+        margin: 0 auto;
+        width: 40%;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .full-info>div:nth-of-type(1) {
+        flex-direction: column;
+    }
+
+    .full-info>div:nth-of-type(2) {
+        flex-direction: column;
+    }
+
+    #gallery-btn>div,
+    #housing-full-info-text-info-container>div:nth-of-type(1),
+    #housing-full-info-text-info-container>div:nth-of-type(2) {
+        width: 90%;
+    }
+
+
+    #gallery-upper-slider .viewport {
+        width: 300px;
+        height: 220px;
+    }
+
+    #gallery-upper-slider .slide {
+        width: 300px;
+    }
+
+    #gallery-upper-slider .left-btn,
+    #gallery-upper-slider .right-btn {
+        top: calc(20px + (220px / 2));
+    }
+
+    #gallery-upper-slider .left-btn {
+        left: 10px;
+    }
+
+    #gallery-upper-slider .right-btn {
+        right: 10px;
+    }
+
+    #gallery-lower-slider {
+        width: 300px;
+    }
+
+    #gallery-lower-slider .viewport {
+        width: 200px;
+    }
+
+    #gallery-lower-slider .slide {
+        margin-right: 0;
+    }
+
+    #gallery-lower-slider .left-btn {
+        left: 0;
+    }
+
+    #gallery-lower-slider .right-btn {
+        right: 0;
+    }
+
+    #search-form .input-container {
+        width: 70%;
+    }
+
+    #dialog-box {
+        height: 400px;
+    }
+
+    #dialog-box form {
+        padding: 5px;
+    }
+
+}
